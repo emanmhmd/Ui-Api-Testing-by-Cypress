@@ -1,0 +1,12 @@
+{
+    "url":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    "login":{
+            "username": "Admin",
+            "password": "admin123"
+    },
+    "diffdata":{
+        "nickname":"Bebo",
+        "keyword":"Sara.Tencrady"
+    }
+
+}
