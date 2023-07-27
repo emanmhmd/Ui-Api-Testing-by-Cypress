@@ -2,18 +2,8 @@
 
 
 
-import {login} from "./login"
-const loginobject = new login() 
+import { validlogin } from "./login";
 
-
-function validlogin(){
-    loginobject.openurl();
-    loginobject.enterusername();
-    loginobject.enterpassword();
-    loginobject.clicklogin();
-    loginobject.validateapilogin();
-    
-}
 describe('Test Search', function() {
 
     beforeEach(() => {

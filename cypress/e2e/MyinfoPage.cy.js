@@ -3,18 +3,9 @@
 
 import {myinfo} from "./myinfo"
 const myinfoobject = new myinfo()
-import {login} from "./login"
-const loginobject = new login() 
 
 
-function validlogin(){
-    loginobject.openurl();
-    loginobject.enterusername();
-    loginobject.enterpassword();
-    loginobject.clicklogin();
-    loginobject.validateapilogin();
-    
-}
+import { validlogin } from "./login"
 describe('Test Upadting data', function() {
 
     beforeEach(() => {
