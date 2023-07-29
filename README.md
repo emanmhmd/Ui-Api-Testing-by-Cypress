@@ -1,4 +1,4 @@
-This is a demo test using cypress
+This is a demo test using Cypress
 __________________________________
 The test contains the following cases to valid different parts in the website:  
 1-Test login with valid coordinates  
