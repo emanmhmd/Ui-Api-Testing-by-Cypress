@@ -13,14 +13,15 @@ export class myinfo {
       });
       
     }
-    // updateavatar(){
-    //   cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click();
-    //   cy.get('.employee-image').click();
-    //   cy.get('.oxd-file-div > .oxd-icon-button').attachFile(cy.fixture('profile.png'));
-    //   cy.wait(5000);
-    //   cy.get('.oxd-button').click();
+    //function to update avatar
+     updateavatar(){
+     cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click();
+      cy.get('.employee-image').click();
+      cy.get('.oxd-file-div > .oxd-icon-button').attachFile('images.png');
+      cy.wait(5000);
+      cy.get('.oxd-button').click();
 
-    // }
+     }
    
 
 

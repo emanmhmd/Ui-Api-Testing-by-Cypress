@@ -1,4 +1,3 @@
-
 /// <reference types="cypress" />
 /// <reference types="cypress-downloadfile"/>
 import { validlogin } from "./login"

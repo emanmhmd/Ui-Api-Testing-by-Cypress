@@ -1,7 +1,4 @@
 /// <reference types="cypress" />
-
-
-
 import { validlogin } from "./login";
 
 describe('Test Search', function() {
