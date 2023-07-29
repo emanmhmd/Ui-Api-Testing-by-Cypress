@@ -1,4 +1,5 @@
 export class myinfo {
+  //Function to update nickname of user
     updatenickname() {
       cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click();
       cy.fixture('data.json').then(data => {
