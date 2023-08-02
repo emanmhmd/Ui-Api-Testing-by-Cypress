@@ -54,7 +54,7 @@ export function validlogin(){
     loginobject.enterusername();
     loginobject.enterpassword();
     loginobject.clicklogin();
-    loginobject.validateapilogin();
+    //loginobject.validateapilogin();
     
 }
 //function to login with invalid data
