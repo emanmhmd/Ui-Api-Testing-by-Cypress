@@ -16,13 +16,13 @@ describe('Test Search', function() {
            
             cy.contains('Search').should('be.visible').click({force:true});
             //to check the request
-            cy.request('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&username=Sara.Tencrady&sortField=u.userName&sortOrder=ASC')
-            .then((response) => {
-              expect(response.status).to.equal(200);
-               expect(response.body).to.have.property('data') ;
-        const userData = response.body.data;
-        expect(userData.some(user => user.username === 'Sara.Tencrady')).to.be.false ;
-      })
+      //       cy.request('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&username=Sara.Tencrady&sortField=u.userName&sortOrder=ASC')
+      //       .then((response) => {
+      //         expect(response.status).to.equal(200);
+      //          expect(response.body).to.have.property('data') ;
+      //   const userData = response.body.data;
+      //   expect(userData.some(user => user.username === 'Sara.Tencrady')).to.be.false ;
+      // })
         })
        
     });

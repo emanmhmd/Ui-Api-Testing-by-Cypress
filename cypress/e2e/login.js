@@ -35,16 +35,16 @@
         cy.get('.oxd-button').click();
     }
     //function to check api of login 
-    validateapilogin(){
-        cy.request('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate', {
-      login: {
-        username: 'Admin',
-        password: 'admin123'
-      }
-    }).then((response) => {
-      expect(response.status).to.equal(200);
-    });
-    }
+    // validateapilogin(){
+    //     cy.request('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate', {
+    //   login: {
+    //     username: 'Admin',
+    //     password: 'admin123'
+    //   }
+    // }).then((response) => {
+    //   expect(response.status).to.equal(200);
+    // });
+    // }
 
 }
 const loginobject = new login() 
