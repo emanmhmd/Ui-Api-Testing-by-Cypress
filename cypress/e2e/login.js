@@ -1,5 +1,7 @@
 //class implementations of login actions
- class login{
+Cypress.config('defaultCommandTimeout', 10000);
+Cypress.on('uncaught:exception', () => false); 
+class login{
       //function to navigate to website url
     openurl(){
         //using fixtures to get data from json file
@@ -31,20 +33,17 @@
         cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('test');
     }
     //function to click on login button
-    clicklogin(){
+    clicklogin_checkAPI(){
+        cy.intercept('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate').as('postRequest');
         cy.get('.oxd-button').click();
+        // Wait for the request to be intercepted
+        cy.wait(100);
+        cy.get('@postRequest').then(interception => {
+        // Assertions on the intercepted request
+        expect(interception.response.statusCode).to.equal(302);
+        });
+       
     }
-    //function to check api of login 
-    // validateapilogin(){
-    //     cy.request('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate', {
-    //   login: {
-    //     username: 'Admin',
-    //     password: 'admin123'
-    //   }
-    // }).then((response) => {
-    //   expect(response.status).to.equal(200);
-    // });
-    // }
 
 }
 const loginobject = new login() 
@@ -53,8 +52,7 @@ export function validlogin(){
     loginobject.openurl();
     loginobject.enterusername();
     loginobject.enterpassword();
-    loginobject.clicklogin();
-    //loginobject.validateapilogin();
+    loginobject.clicklogin_checkAPI();
     
 }
 //function to login with invalid data
@@ -62,7 +60,7 @@ export function invalidlogin(){
     loginobject.openurl();
     loginobject.enterusername();
     loginobject.enterwrongpassword();
-    loginobject.clicklogin();
+    loginobject.clicklogin_checkAPI();
      //to check that error message appeared and contains certain text
     cy.get('.oxd-alert-content > .oxd-text').should('be.visible').and('contain', 'Invalid credentials');
 }
