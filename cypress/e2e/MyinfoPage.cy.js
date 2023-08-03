@@ -11,14 +11,14 @@ describe('Test Upadting data', function() {
       validlogin();
     })
     //To update nickname
-    it.skip('Update nickname',()=>{
+    it('Update nickname',()=>{
     
         myinfoobject.updatenickname();
        
-    })
+    });
     //to update avatar
     it('Update Avatar', ()=>{
       myinfoobject.updateavatar();
-    })
+    });
   
 })
