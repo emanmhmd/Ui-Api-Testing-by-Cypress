@@ -38,7 +38,7 @@ To run the tests, follow these steps:
 2. Navigate to the project directory.  
 3. Install Cypress if you haven't already using `npm install cypress`.  
 4. Start Cypress by running `npx cypress open`.  
-5. In the Cypress test runner, click on the test spec file you want to run (e.g., `login.spec.js`) to execute the tests.  
+5. In the Cypress test runner, click on the test spec file you want to run (e.g., `LoginPage.cy.js`) to execute the tests.  
 
 ## Configuration  
 
