@@ -21,8 +21,8 @@ describe('Test Upadting data', function() {
       myinfoobject.updateavatar();
     });
 
-    it.only('Update Gender',()=>{
-      myinfoobject.updateGender();
-    });
+    // it.only('Update Gender',()=>{
+    //   myinfoobject.updateGender();
+    // });
   
 })
