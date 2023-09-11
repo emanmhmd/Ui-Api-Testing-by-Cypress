@@ -29,6 +29,15 @@ export class myinfo {
       cy.get('.oxd-button').click();
 
      }
+    //function to update Gender
+    updateGender (){
+      //not working idk why ?
+      cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click();
+      cy.get(':nth-child(2) > :nth-child(2) > .oxd-radio-wrapper > label > .oxd-radio-input').should('be.visible').click({force:true});
+      cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button').should('be.visible').click({force:true});
+      cy.get('.oxd-toast').should('be.visible','contain','Successfully Updated');
+
+    }
    
 
 
