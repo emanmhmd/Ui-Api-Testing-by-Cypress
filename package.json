@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "cypress-downloadfile": "^1.2.3",
+    "npm": "^10.2.0",
     "npm-upgrade": "^3.1.0"
   }
 }
